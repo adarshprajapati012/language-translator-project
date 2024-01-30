@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #440b82;
+    background-image: url("https://media.istockphoto.com/id/1178961089/vector/creative-map-with-different-languages-on-special-countries.jpg?s=612x612&w=0&k=20&c=cQOGShQvv1DWToW2JGyNJlALyLWF-Upr23u2ow_FYig=");
+    background-repeat: round;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 36px -5px #b8b8ff;
+}
+
+.wrapper {
+    border-radius: 5px;
+    border: 1px solid #721fca;
+}
+
+.wrapper .text-input {
+    display: block;
+}
+
+.text-input .to-text {
+    border-radius: 0px;
+    border-top: 1px solid #ccc;
+}
+
+.text-input textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    border-radius: 0.3rem;
+}
+
+.text-input textarea::placeholder {
+    color: #8c8c8c;
+    font-size: 30px;
+}
+
+.controls,
+li,
+.icons,
+.icons ion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    list-style: none;
+    padding: 12px 15px;
+    border-top: 1px solid #ccc;
+}
+
+.controls .row .icons {
+    width: 38%;
+}
+
+.controls .row .icons ion-icon {
+    width: 50px;
+    color: #adadad;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: center;
+}
+
+.controls .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+}
+
+.controls .row select {
+    color: #333;
+    border: 3px solid rgba(151, 94, 221, 0.102);
+    border-radius: 20px;
+    outline: none;
+    font-size: 20px;
+    background: none;
+    padding-left: 5px;
+}
+
+.text-input textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.controls .row select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track {
+    background: #e4e4e4;
+}
+
+.text-input textarea::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.controls .row select::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+}
+
+.controls .exchange {
+    color: #adadad;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: transform 0.2s ease;
+}
+
+.controls ion-icon:active {
+    transform: scale(0.9);
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    background: #4f269a;
+}
+
+@media (max-width: 660px) {
+    .container {
+        padding: 20px;
+    }
+
+    .wrapper .text-input {
+        flex-direction: column;
+    }
+
+    .text-input .to-text {
+        border-left: 0px;
+        border-top: 1px solid #ccc;
+    }
+
+    .text-input textarea {
+        height: 200px;
+    }
+
+    .controls .row .icons {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .container button {
+        padding: 0px;
+        font-size: 10rem;
+    }
+
+    .controls .row select {
+        font-size: 1.2rem;
+    }
+
+    .controls .exchange {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .container {
+        zoom: 0.7;
+    }
+}
+
+.animate-btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .animate-btn:hover {
+    transform: scale(1.05);
+  }
+  
+
+
+
+ 
+
+@keyframes pop-up {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes flip-out {
+    from {
+      transform: perspective(400px) rotateY(0);
+    }
+    to {
+      transform: perspective(400px) rotateY(180deg);
+    }
+  }
+  
+  
+  
+  .animate-pop-up {
+    animation: pop-up 0.5s ease-in-out;
+  }
+  
+  .animate-flip-out {
+    animation: flip-out 0.5s ease-in-out;
+  }
+  
+
+  
